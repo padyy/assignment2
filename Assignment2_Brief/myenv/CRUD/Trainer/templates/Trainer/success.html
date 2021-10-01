@@ -1,0 +1,25 @@
+{% extends 'Trainer/base.html' %}
+
+{% block title %}Trainer's creation{% endblock%}
+
+{% block header %}
+    <div class="header">
+        <a href="#default" class="logo">Trainer CRUD</a>
+        <div class="header-right">
+            <a href="/trainer/Home/">Home</a>
+            <a href="/trainer/TrainerCreation/">New trainer</a>
+            <a href="/trainer/ReadTrainer/">Trainer's list</a>
+            <a href="/trainer/UpdateTrainerPage/">Update a trainer</a>
+            <a href="/trainer/DeleteTrainerPage/">Delete a trainer</a>
+            <a href="/trainer/About/">About</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="success_msg">
+        <h2>Well Done!</h2>
+        <h4>{{ message }}</h4>
+    </div>
+{% endblock content %}
+

@@ -1,0 +1,27 @@
+{% extends 'Trainer/base.html' %}
+
+{% block title %}Trainer's home page{% endblock%}
+
+{% block header %}
+    <div class="header">
+        <a href="#default" class="logo">Trainer CRUD</a>
+        <div class="header-right">
+            <a class="active" href="/trainer/Home/">Home</a>
+            <a href="/trainer/TrainerCreation/">New trainer</a>
+            <a href="/trainer/ReadTrainer/">Trainer's list</a>
+            <a href="/trainer/UpdateTrainerPage/">Update a trainer</a>
+            <a href="/trainer/DeleteTrainerPage/">Delete a trainer</a>
+            <a href="/trainer/About/">About</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="main_content">
+        <h1>Welcome to Trainers Home Page.</h1>
+        <pre>Please choose the category you are interested for from the header above
+             and you will be redirected to a new page.
+        </pre>
+    </div>
+{% endblock %}
+

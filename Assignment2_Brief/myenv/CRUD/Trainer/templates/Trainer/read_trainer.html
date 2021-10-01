@@ -1,0 +1,58 @@
+{% extends 'Trainer/base.html' %}
+
+{% block title %}Read Trainer{% endblock%}
+
+{% block header %}
+    <div class="header">
+        <a href="#default" class="logo">Trainer CRUD</a>
+        <div class="header-right">
+            <a href="/trainer/Home/">Home</a>
+            <a href="/trainer/TrainerCreation/">New trainer</a>
+            <a class="active" href="/trainer/ReadTrainer/">Trainer's list</a>
+            <a href="/trainer/UpdateTrainerPage/">Update a trainer</a>
+            <a href="/trainer/DeleteTrainerPage/">Delete a trainer</a>
+            <a href="/trainer/About/">About</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="main_content">
+        <h1>Welcome to Trainers Read Page.</h1>
+        <pre>In this page you will be informed about the list of trainers
+that are stored into the database.
+        </pre>
+        <br>
+        <h2>Trainer's List</h2>
+    </div>
+
+    <div class='trainer_list'>
+            <table class="trainers_table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Lastname</th>
+                        <th>Subject</th>
+                        <th>Courses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for trainer in trainer_list %}
+                        <tr>
+                            <td>{{trainer.name}}</td>
+                            <td>{{trainer.lastname}}</td>
+                            <td>{{trainer.subject}}</td>
+                            <td>{{trainer.courses}}</td>
+                        </tr>
+                    {% empty %}
+                            <div class="Empty_Table">
+                                <p>Trainers list is empty! Please input first some trainers! <a href="/trainer/TrainerCreation/">Add a Trainer</a></p2>
+                                
+                            </div>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+
+{% endblock %}
+

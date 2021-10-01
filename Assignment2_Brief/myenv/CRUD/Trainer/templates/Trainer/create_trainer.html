@@ -1,0 +1,57 @@
+{% extends 'Trainer/base.html' %}
+
+{% block title %}Trainer's creation{% endblock%}
+
+{% block header %}
+    <div class="header">
+        <a href="#default" class="logo">Trainer CRUD</a>
+        <div class="header-right">
+            <a href="/trainer/Home/">Home</a>
+            <a class="active" href="/trainer/TrainerCreation/">New trainer</a>
+            <a href="/trainer/ReadTrainer/">Trainer's list</a>
+            <a href="/trainer/UpdateTrainerPage/">Update a trainer</a>
+            <a href="/trainer/DeleteTrainerPage/">Delete a trainer</a>
+            <a href="/trainer/About/">About</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="main_content">
+        <h1>Welcome to Trainers Creation Page.</h1>
+        <pre>Create as many trainers as you like.
+        </pre>
+        <h2>Please fill out the trainer's info</h2>
+        <form action="/trainer/TrainerCreation/" method="post">
+            <br>
+            {% csrf_token %}
+            <div class="form_input">
+                {{ form.name.errors }}
+                <label for="{{ for.name.id_for_label }}" class='NameLb'>Name</label>
+                {{ form.name }}
+            </div> <br>
+            <div class="form_input">
+                {{ form.lastname.errors }}
+                <label for="{{ for.lastname.id_for_label }}"class='LastnameLb'>Lastname</label>
+                {{ form.lastname }}
+            </div> <br>
+            <div class="form_input">
+                {{ form.subject.errors }}
+                <label for="{{ for.subject.id_for_label }}"class='SubjectLb'>Subject</label>
+                {{ form.subject }}
+            </div> <br>
+             <div class="form_input">
+                {{ form.courses.errors }}
+                <label for="{{ for.courses.id_for_label }}"class='CoursesLb'>Courses</label>
+                {{ form.courses }}
+            </div> <br>
+            <input type="submit" value="Submit" class="submit_but">
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <p>Copyrights Pantelakis Ioannis</p>
+    </div>
+{% endblock %}

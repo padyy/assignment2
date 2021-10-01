@@ -1,0 +1,30 @@
+<!--  This is Base.html . It's a file with blocks from which other templates extends -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title> {% block title %} Assignment2 {% endblock %}</title>  <!--  title block  -->
+         {% load static %}
+         <link rel='stylesheet' type='text/css' href="{% static 'css/trainer.css' %}"> <!--  link with css for project  -->
+
+    </head>
+    <body>  
+        <!--  body's blocks  -->
+
+        {% block header %} {% endblock %}
+
+        <div class = 'content' >
+            {%block content%}
+
+                Default content
+
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+            <div class="footer">
+                <p>Copyright Pantelakis Ioannis</p>
+            </div>
+        {% endblock %}
+    </body>
+</html>

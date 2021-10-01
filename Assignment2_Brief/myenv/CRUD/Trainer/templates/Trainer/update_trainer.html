@@ -1,0 +1,42 @@
+{% extends 'Trainer/base.html' %}
+
+{% block title %}Update Trainer {{trainer.lastname}}{% endblock%}
+
+{% block header %}
+    <div class="header">
+        <a href="#default" class="logo">Trainer CRUD</a>
+        <div class="header-right">
+            <a href="/trainer/Home/">Home</a>
+            <a href="/trainer/TrainerCreation/">New trainer</a>
+            <a href="/trainer/ReadTrainer/">Trainer's list</a>
+            <a href="/trainer/UpdateTrainerPage/">Update a trainer</a>
+            <a href="/trainer/DeleteTrainerPage/">Delete a trainer</a>
+            <a href="/trainer/About/">About</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="main_content">
+        <h2>Editting Trainer -- {{trainer.lastname}}</h2>
+        <br>
+
+        <form class="update_form_control" method="POST">
+            {% csrf_token %}
+            <label class="la_control" for="name"><b>Name:</b></label>
+            <input class="in_control" type="text" name="name" value="{{trainer.name}} " required><br>
+            <label class="la_control" for="lastname"><b>Lastname:</b></label>
+            <input class="in_control" type="text" name="lastname" value="{{trainer.lastname}}" required><br>
+            <label class="la_control" for="subject"><b>Subject:</b></label>
+            <input class="in_control" type="text" name="subject" value="{{trainer.subject}}" required><br>
+            <label class="la_control" for="courses"><b>Courses:</b></label>
+            <input class="in_control" type="text" name="courses" value="{{trainer.courses}}" required><br>
+            
+            <br>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+        </form>
+    </div>
+
+{% endblock %}
+
