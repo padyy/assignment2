@@ -2,12 +2,12 @@
 CRUD using MVC
 
 # Info
--Coding Bootcamp - Assigment 2 
--Last name : Pantelakis
--First Name: Ioannis
--Advisors: Giachoudis Nikolaos , Tzoumpa Danae 
--Python ver:3.9.2
--win: win10 64bit
+Coding Bootcamp Assigment 2 
+/Last name : Pantelakis
+/First Name: Ioannis
+/Advisors: Giachoudis Nikolaos , Tzoumpa Danae 
+/Python ver:3.9.2
+/win: win10 64bit
 
 # Manual
 This package is about a django project called Assignment 2 Brief. It includes crud functionality for a model named Trainer.
